@@ -29,4 +29,19 @@ $(document).ready(function() {
     const result = subtract(number1, number2);
     $("#output2").text(result);
   });
+  $("form#mult").submit(function(event){
+    event.preventDefault();
+    const number1 = parseInt($("#mult1").val());
+    const number2 = parseInt($("#mult2").val());
+    const result = multiply(number1, number2);
+    $("#output3").text(result);
+  });
+
+  $("form#div").submit(function(event){
+    event.preventDefault();
+    const number1 = parseInt($("#div1").val());
+    const number2 = parseInt($("#div2").val());
+    const result = divide(number1, number2);
+    $("#output4").text(result);
+  });
 });
